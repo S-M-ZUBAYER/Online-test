@@ -15,18 +15,23 @@ const BodyPart = () => {
 
     const handlerForNext = () => {
 
-        refOne.current.childNodes[count].classList.add('bg-green-600')
+        refOne.current.childNodes[count].classList.remove('bg-white');
+        refOne.current.childNodes[count].classList.add('bg-green-600');
         setNext(next + 1);
         setCount(count + 1)
     }
     const handlerForReview = () => {
-        refOne.current.childNodes[count].classList.add("bg-yellow-400")
+        refOne.current.childNodes[count].classList.remove('bg-white');
+        refOne.current.childNodes[count].classList.add("bg-yellow-400");
         setReview(review + 1);
         setCount(count + 1)
     }
     const handlerForDump = () => {
-        refOne.current.childNodes[count].classList.add('bg-gray-200')
-        setCount(count + 1)
+        refOne.current.childNodes[count].classList.remove('bg-white');
+        refOne.current.childNodes[count].classList.add('bg-gray-200');
+        setDump(dump + 1)
+        setCount(count + 1);
+
     }
 
     return (
